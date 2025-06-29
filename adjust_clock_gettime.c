@@ -18,10 +18,11 @@
  * cc -o adjust_clock_gettime_wrap.so -fPIC -shared adjust_clock_gettime.c
  */
 
-#include <stdlib.h>
-#include <time.h>
+#include <sys/types.h>
 #include <dlfcn.h>
 #include <limits.h>
+#include <stdlib.h>
+#include <time.h>
 
 #ifndef	nitems
 #define nitems(_x)	(sizeof((_x)) / sizeof((_x)[0]))

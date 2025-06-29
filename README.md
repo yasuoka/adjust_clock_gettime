@@ -1,7 +1,9 @@
 adjust\_clock\_gettime
 ======================
 
-Adjust the result of clock\_gettime(3) by LD\_PRELOAD.
+Tweak ``clock_gettime(3)`` for debug by ``LD_PRELOAD``.
+
+To adjust -1 day the result of ``clock_gettime(CLOCK_MONOTIME,)``
 
 ```
 $ cc -o adjust_clock_gettime_wrap.so -fPIC -shared adjust_clock_gettime.c
